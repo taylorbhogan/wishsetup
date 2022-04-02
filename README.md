@@ -1,9 +1,9 @@
 # wish
 share your wishlist with your loved ones to help them communicate, and keep their claims a surprise to you.
 
-# technology
+## technology
 
-## Design
+### Design
 designed using [figma](https://figma.com); view the design file [here](https://www.figma.com/file/1JnxKYqqK2hl6OQv1Fn3ZK/Wish-Mobile-Design-1?node-id=0%3A1).
 - color palette: [materialDesign](https://material.io/design/color/the-color-system.html#tools-for-picking-colors)
   - yellow 300: ![#fff176](https://via.placeholder.com/15/fff176/000000?text=+) `#fff176`
@@ -15,3 +15,35 @@ designed using [figma](https://figma.com); view the design file [here](https://w
 - placeholder images for this README: [placeholder](https://placeholder.com/)
 - illustrations: [unDraw](https://undraw.co)
 - ui elements: [materialUi](https://mui.com)
+
+### Database
+[MongoDB](https://www.mongodb.com/)
+
+## Database Schema
+TODO: Insert a visual representation of database schema
+
+### Users
+| Field             | Data Type               | Constraints
+| ---------------   | ---------------         | ---------------
+| `id`              | `string`                | `not null`, `primary key`
+| `name`            | `string`                | `not null`
+| `email`           | `string`                | `not null`
+| `hashedPassword`  | `string`                | `not null`
+| `avatar`          | `string`                | 
+| `groups`          | `array: [ ObjectId ]`   | `not null`
+
+### Groups
+| Field             | Data Type               | Constraints
+| ---------------   | ---------------         | ---------------
+| `id`              | `string`                | `not null`, `primary key`
+| `name`            | `string`                | 
+| `users`           | `array: [ ObjectId ]`   | `not null`
+
+### Gifts
+| Field             | Data Type               | Constraints
+| ---------------   | ---------------         | ---------------
+| `id`                | `string`                  | `not null`, `primary key`
+| `name`              | `string`                  | `not null`
+| `wishedBy`          | `objectId`                | `not null`
+| `isClaimed`         | `boolean`                 | `not null`, `default = true`
+| `claimedBy`         | `objectId`                | 
