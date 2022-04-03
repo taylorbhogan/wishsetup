@@ -20,7 +20,8 @@ designed using [figma](https://figma.com); view the design file [here](https://w
 [MongoDB](https://www.mongodb.com/)
 
 ## Database Schema
-TODO: Insert a visual representation of database schema
+![Screen Shot 2022-04-02 at 8 35 20 PM](https://user-images.githubusercontent.com/79616733/161410240-bc0d4bc3-0876-42ef-9e7a-7cec93fe2d16.png)
+
 
 ### Users
 | Field             | Data Type               | Constraints
