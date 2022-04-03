@@ -44,6 +44,9 @@ TODO: Insert a visual representation of database schema
 | ---------------   | ---------------         | ---------------
 | `id`                | `string`                  | `not null`, `primary key`
 | `name`              | `string`                  | `not null`
+| `description`       | `string`                  |
 | `wishedBy`          | `objectId`                | `not null`
 | `isClaimed`         | `boolean`                 | `not null`, `default = false`
 | `claimedBy`         | `objectId`                | 
+| `url`               | `string`                  |
+
